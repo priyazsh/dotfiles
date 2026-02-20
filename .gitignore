@@ -1,0 +1,15 @@
+*# ignore everything
+*
+
+# don't ignore .gitignore itself
+!.gitignore
+
+# allow selected folders
+!waybar/
+!hypr/
+!kitty/
+
+# allow their contents
+!waybar/**
+!hypr/**
+!kitty/**
