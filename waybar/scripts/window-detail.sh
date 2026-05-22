@@ -29,9 +29,11 @@ address="$(printf '%s' "$window_json" | jq -r '.address // "unknown"')"
 
 app="$class"
 icon="󰣆"
+class_lc="$(printf '%s' "$class" | tr '[:upper:]' '[:lower:]')"
 
-case "$(printf '%s' "$class" | tr '[:upper:]' '[:lower:]')" in
+case "$class_lc" in
   *firefox*) icon=""; app="Firefox" ;;
+  *helium*) icon="󰖟"; app="helium" ;;
   *code*|*codium*) icon="󰨞"; app="Code" ;;
   *obsidian*) icon="󰹕"; app="Obsidian" ;;
   *spotify*) icon=""; app="Spotify" ;;
@@ -44,16 +46,35 @@ esac
 [ -n "$app" ] || app="Window"
 [ -n "$title" ] || title="$app"
 
-short_title="$title"
-if [ "${#short_title}" -gt 54 ]; then
-  short_title="$(printf '%.51s...' "$short_title")"
+display_title="$title"
+source_name="$app"
+is_browser=0
+
+case "$class_lc" in
+  *helium*|*firefox*|*chromium*|*chrome*)
+    is_browser=1
+    display_title="$(printf '%s' "$display_title" |
+      sed -E 's/^[Hh]elium[[:space:]]*[•-][[:space:]]*//; s/[[:space:]]+-[[:space:]]*(Helium|Mozilla Firefox|Firefox|Chromium|Google Chrome)$//')"
+    ;;
+esac
+
+[ -n "$display_title" ] || display_title="$title"
+
+short_display="$display_title"
+if [ "${#short_display}" -gt 42 ]; then
+  short_display="$(printf '%.39s...' "$short_display")"
+fi
+
+if [ "${#source_name}" -gt 18 ]; then
+  source_name="$(printf '%.15s...' "$source_name")"
 fi
 
 jq -nc \
-  --arg text "$icon  $app  •  $short_title" \
+  --arg text "$(if [ "$is_browser" -eq 1 ]; then printf '%s  %s' "$icon" "$short_display"; else printf '%s  %s | %s' "$icon" "$short_display" "$source_name"; fi)" \
   --arg tooltip "App: $app
 Class: $class
 Title: $title
+Display: $(if [ "$is_browser" -eq 1 ]; then printf '%s' "$display_title"; else printf '%s | %s' "$display_title" "$source_name"; fi)
 Workspace: $workspace
 Mode: $floating / $fullscreen
 PID: $pid
