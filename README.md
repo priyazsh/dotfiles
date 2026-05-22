@@ -1,1 +1,7 @@
-<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/6a6ba2f7-9bd8-4560-8c86-0ca77e857b03" />
+# Dotfiles
+
+Personal Linux/Hyprland configuration files.
+
+Most of these configs were downloaded from various sources on the internet and tweaked/modified by me over time to fit my workflow and preferences.
+
+Modified and maintained by Priyansh Prajapat.

@@ -1,0 +1,40 @@
+{
+  "layer": "top",
+  "height": 32,
+  "spacing": 7,
+  "include": [
+    "./modules/groups.jsonc",
+    "./modules/distro.jsonc",
+    "./modules/storage.jsonc",
+    "./modules/system.jsonc",
+    "./modules/media.jsonc",
+    "./modules/window.jsonc",
+    "./modules/power-profiles-daemon.jsonc",
+    "./modules/workspace.jsonc",
+    "./modules/idle-ihibitor.jsonc",
+    "./modules/audio.jsonc",
+    "./modules/connections.jsonc",
+    "./modules/battery.jsonc",
+    "./modules/clock.jsonc",
+    "./modules/tray-notif.jsonc"
+  ],
+  "modules-left": [
+    "group/distro-group",
+    "hyprland/workspaces",
+    "group/storage",
+    "group/system"
+  ],
+  "modules-center": [
+    "custom/window-detail"
+  ],
+  "modules-right": [
+    "group/media",
+    "power-profiles-daemon",
+    "idle_inhibitor",
+    "group/audio",
+    "group/connections",
+    "battery",
+    "clock",
+    "group/tray-group"
+  ]
+}

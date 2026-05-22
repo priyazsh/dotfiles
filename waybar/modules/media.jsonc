@@ -1,0 +1,33 @@
+{
+  "custom/cava": {
+    "exec": "~/.config/waybar/scripts/cava.sh",
+    "return-type": "json",
+    "restart-interval": 2,
+    "format": "{}",
+    "tooltip": true,
+    "hide-empty-text": true
+  },
+  "mpris": {
+    "format": "<span size='12pt'>{player_icon}</span> <span weight='700'>{title}</span>",
+    "format-paused": "<span size='12pt'>{status_icon}</span> <span alpha='70%'>{title}</span>",
+    "format-stopped": "",
+    "max-length": 22,
+    "player-icons": {
+      "default": "󰎈 ",
+      "spotify": " ",
+      "helium": " ",
+      "helium-browser": " ",
+      "firefox": "󰈹 ",
+      "vlc": "󰕼 ",
+      "mpv": "󰕼 "
+    },
+    "status-icons": {
+      "paused": " "
+    },
+    "tooltip-format": "{player}: {artist} - {title}",
+    "on-click": "playerctl play-pause",
+    "on-click-right": "playerctl next",
+    "on-scroll-up": "playerctl previous",
+    "on-scroll-down": "playerctl next"
+  }
+}

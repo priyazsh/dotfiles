@@ -1,15 +1,23 @@
-*# ignore everything
 *
-
-# don't ignore .gitignore itself
 !.gitignore
 
-# allow selected folders
-!waybar/
 !hypr/
-!kitty/
-
-# allow their contents
-!waybar/**
 !hypr/**
+
+!nvim/
+!nvim/**
+
+!fastfetch/
+!fastfetch/**
+
+!kitty/
 !kitty/**
+
+!rofi/
+!rofi/**
+
+!swaync/
+!swaync/**
+
+!waybar/
+!waybar/**

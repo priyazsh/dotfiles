@@ -1,0 +1,86 @@
+* {
+    bg: rgba(17,17,27,0.92);
+    bg-alt: rgba(30,30,46,0.95);
+
+    fg: #cdd6f4;
+    selected: #89b4fa;
+
+    border: #89b4fa;
+
+    background-color: transparent;
+    text-color: @fg;
+}
+
+window {
+    transparency: "real";
+    location: north;
+
+    width: 35%;
+    y-offset: 18%;
+
+    border: 2px;
+    border-radius: 24px;
+    border-color: @border;
+
+    background-color: @bg;
+}
+
+mainbox {
+    background-color: transparent;
+    padding: 30px;
+}
+
+inputbar {
+    background-color: transparent;
+    children: [entry];
+
+    padding: 14px;
+    margin: 0px 0px 20px 0px;
+}
+
+entry {
+    background-color: transparent;
+
+    font: "JetBrainsMono Nerd Font 18";
+    text-color: @fg;
+
+    placeholder: "Search apps...";
+    placeholder-color: #6c7086;
+}
+
+listview {
+    lines: 6;
+    columns: 1;
+
+    spacing: 10px;
+    scrollbar: false;
+
+    background-color: transparent;
+}
+
+element {
+    padding: 14px;
+    border-radius: 16px;
+
+    background-color: transparent;
+}
+
+element normal.normal {
+    background-color: transparent;
+    text-color: @fg;
+}
+
+element selected.normal {
+    background-color: @bg-alt;
+    text-color: @selected;
+}
+
+element-icon {
+    size: 30px;
+    margin: 0px 14px 0px 0px;
+}
+
+element-text {
+    background-color: transparent;
+    text-color: inherit;
+}

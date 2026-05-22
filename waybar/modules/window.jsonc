@@ -1,0 +1,9 @@
+{
+  "custom/window-detail": {
+    "exec": "~/.config/waybar/scripts/window-detail.sh",
+    "return-type": "json",
+    "interval": 1,
+    "format": "{}",
+    "tooltip": true
+  }
+}

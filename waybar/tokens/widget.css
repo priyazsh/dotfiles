@@ -1,0 +1,179 @@
+@import "colors.css";
+
+/*======= MODULE INDEPENDENT =======*/
+#distro-group {
+  margin: 2px 4px;
+  background-color: @surface_container;
+  border-radius: 20px;
+  color: @primary;
+}
+
+#custom-distro {
+  color: @primary;
+  padding: 2px 8px 2px 4px;
+}
+
+#custom-terminal {
+  color: #a6e3a1;
+  padding: 0px 10px;
+}
+
+#custom-code {
+  color: #89b4fa;
+  padding: 0px 10px;
+}
+
+#custom-office {
+  color: #ff6f4c;
+  padding: 0px 10px;
+}
+
+#custom-obsidian {
+  color: #cba6f7;
+  padding: 0px 10px;
+}
+
+#custom-files {
+  color: #f9e2af;
+  padding: 0px 10px 0px 8px;
+}
+
+#custom-spotify {
+  color: #1db954;
+  padding: 0px 10px;
+}
+
+#custom-browser {
+  color: #fab387;
+  padding: 0px 15px 0px 10px;
+}
+
+#media {
+  margin: 0;
+  padding: 0;
+  background-color: transparent;
+  border-radius: 0;
+}
+
+#power-profiles-daemon,
+#idle_inhibitor,
+#window,
+#custom-window-detail {
+  margin: 2px 4px;
+  padding: 2px 8px 2px 4px;
+  background-color: @surface_container;
+  border-radius: 20px;
+  color: @secondary_fixed_dim;
+}
+
+#mpris {
+  margin: 2px 4px 2px 0;
+  padding: 2px 10px 2px 8px;
+  background-color: @surface_container_high;
+  border-radius: 0 20px 20px 0;
+  border-bottom: 2px solid #c3c3eb;
+  color: @primary_fixed;
+}
+
+#mpris.stopped {
+  min-width: 0;
+  margin: 0;
+  padding: 0;
+  border-bottom: 0;
+  background-color: transparent;
+  color: transparent;
+  font-size: 0;
+}
+
+#custom-cava {
+  min-width: 62px;
+  margin: 2px 0 2px 4px;
+  padding: 1px 6px 1px 8px;
+  background-color: @surface_container_highest;
+  border-radius: 20px 0 0 20px;
+  border-bottom: 2px solid #c3c3eb;
+  color: #f9e2af;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+#custom-cava.silent {
+  color: @outline;
+}
+
+#custom-cava.updated {
+  color: #f9e2af;
+}
+
+#window,
+#custom-window-detail {
+  min-width: 360px;
+  padding: 2px 18px;
+  border-radius: 20px;
+  background-color: @surface_container_high;
+  color: @on_surface;
+  border-bottom: 2px solid @primary;
+}
+
+#custom-window-detail.active {
+  color: @on_surface;
+}
+
+window#waybar.empty #window,
+#custom-window-detail.empty {
+  min-width: 180px;
+  color: @outline;
+  border-bottom-color: @outline_variant;
+}
+
+/*======= MODULE CAPSUL =======*/
+#audio,
+#connections,
+#system,
+#storage {
+  margin: 2px 4px;
+  padding: 2px 6px;
+  background-color: @surface_container;
+  border-radius: 20px;
+  color: @secondary_fixed_dim;
+}
+
+#disk,
+#memory,
+#cpu,
+#temperature,
+#bluetooth {
+  margin-right: 2px;
+  padding: 0 8px;
+}
+
+#network {
+  padding: 0px 10px 0px 4px;
+}
+
+#pulseaudio {
+  margin-right: 12px;
+  margin-left: 8px;
+}
+
+/*======= TRAY =======*/
+#tray-group {
+  margin: 2px 4px;
+  background-color: @surface_container;
+  border-radius: 20px;
+}
+
+#custom-tray-arrow {
+  padding: 2px 8px 2px 4px;
+  color: @primary;
+}
+
+#tray {
+  padding: 2px 6px;
+}
+
+#tray>.passive,
+#tray>.active,
+#tray>.needs-attention {
+  -gtk-icon-effect: none;
+}
