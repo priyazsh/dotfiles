@@ -1,0 +1,29 @@
+window {
+    background: rgba(20, 20, 20, 0.75);
+    border-radius: 20px;
+    border: 1px solid rgba(255,255,255,0.08);
+    box-shadow: 0 8px 30px rgba(0,0,0,0.4);
+}
+
+progressbar {
+    min-height: 10px;
+    border-radius: 999px;
+    background: rgba(255,255,255,0.08);
+}
+
+progress {
+    min-height: 10px;
+    border-radius: 999px;
+    background: #89b4fa;
+}
+
+image {
+    color: #ffffff;
+}
+
+label {
+    color: white;
+    font-family: "Poppins";
+    font-size: 15px;
+    font-weight: 600;
+}

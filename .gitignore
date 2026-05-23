@@ -21,3 +21,6 @@
 
 !waybar/
 !waybar/**
+
+!swayosd
+!swayosd/**
