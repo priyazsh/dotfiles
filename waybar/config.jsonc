@@ -2,10 +2,10 @@
   "layer": "top",
   "height": 32,
   "spacing": 7,
+  "output": ["eDP-1"],
   "include": [
     "./modules/groups.jsonc",
     "./modules/distro.jsonc",
-    "./modules/storage.jsonc",
     "./modules/system.jsonc",
     "./modules/media.jsonc",
     "./modules/window.jsonc",
@@ -21,7 +21,6 @@
   "modules-left": [
     "group/distro-group",
     "hyprland/workspaces",
-    "group/storage",
     "group/system"
   ],
   "modules-center": [

@@ -16,18 +16,14 @@
       "custom/browser"
     ]
   },
-  "group/storage": {
-    "orientation": "horizontal",
-    "modules": [
-      "disk",
-      "memory"
-    ]
-  },
+
   "group/system": {
     "orientation": "horizontal",
     "modules": [
+      "cpu",
       "temperature",
-      "cpu"
+      "memory",
+      "network#speed"
     ]
   },
   "group/media": {
@@ -51,10 +47,6 @@
   },
   "group/connections": {
     "orientation": "horizontal",
-    "drawer": {
-      "transition-duration": 500,
-      "transition-left-to-right": false
-    },
     "modules": [
       "network",
       "bluetooth"

@@ -2,10 +2,11 @@
   "custom/cava": {
     "exec": "~/.config/waybar/scripts/cava.sh",
     "return-type": "json",
-    "restart-interval": 2,
+    "restart-interval": 10,
     "format": "{}",
     "tooltip": true,
     "hide-empty-text": true
+    
   },
   "mpris": {
     "format": "<span size='12pt'>{player_icon}</span> <span weight='700'>{title}</span>",

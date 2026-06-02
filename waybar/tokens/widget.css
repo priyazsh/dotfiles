@@ -129,8 +129,7 @@ window#waybar.empty #window,
 /*======= MODULE CAPSUL =======*/
 #audio,
 #connections,
-#system,
-#storage {
+#system {
   margin: 2px 4px;
   padding: 2px 6px;
   background-color: @surface_container;
@@ -142,13 +141,16 @@ window#waybar.empty #window,
 #memory,
 #cpu,
 #temperature,
+#network,
 #bluetooth {
   margin-right: 2px;
   padding: 0 8px;
 }
 
-#network {
-  padding: 0px 10px 0px 4px;
+#network.speed {
+  min-width: 140px;
+  font-size: 13px;
+  font-feature-settings: "tnum";
 }
 
 #pulseaudio {

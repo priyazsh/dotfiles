@@ -22,12 +22,6 @@
   "tray": {
     "icon-size": 20,
     "spacing": 12,
-    "show-passive-items": true,
-    "icons": {
-      "blueman": "/usr/share/icons/Tela-circle-dark/scalable/apps/blueman.svg",
-      "discord": "/usr/share/icons/Tela-circle-dark/scalable/apps/discord.svg",
-      "spotify": "/usr/share/icons/Tela-circle/scalable/apps/spotify.svg",
-      "steam": "/usr/share/icons/Tela-circle-dark/scalable/apps/steam.svg"
-    }
+    "show-passive-items": true
   }
 }

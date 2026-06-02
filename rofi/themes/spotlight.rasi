@@ -1,68 +1,111 @@
 * {
-    bg: rgba(17,17,27,0.92);
-    bg-alt: rgba(30,30,46,0.95);
+    bg: rgba(24,24,27,0.82);
+    bg-alt: rgba(255,255,255,0.08);
 
-    fg: #cdd6f4;
-    selected: #89b4fa;
+    fg: #ffffff;
+    fg-alt: #b4b4b8;
 
-    border: #89b4fa;
+    accent: #89b4fa;
 
     background-color: transparent;
     text-color: @fg;
+
+    font: "SF Pro Display 16";
 }
 
 window {
     transparency: "real";
-    location: north;
 
-    width: 35%;
-    y-offset: 18%;
+    location: center;
+    anchor: center;
 
-    border: 2px;
-    border-radius: 24px;
-    border-color: @border;
+    fullscreen: false;
+
+    width: 42%;
+
+    border: 1px;
+    border-color: rgba(255,255,255,0.05);
+
+    border-radius: 30px;
 
     background-color: @bg;
+
+    y-offset: -10%;
 }
 
 mainbox {
     background-color: transparent;
-    padding: 30px;
+
+    spacing: 22px;
+
+    padding: 34px;
 }
 
 inputbar {
-    background-color: transparent;
-    children: [entry];
+    background-color: rgba(255,255,255,0.07);
 
-    padding: 14px;
-    margin: 0px 0px 20px 0px;
+    border-radius: 18px;
+
+    padding: 18px 22px;
+
+    children: [ prompt, entry ];
+}
+
+prompt {
+    enabled: true;
+
+    text-color: @fg-alt;
+
+    background-color: transparent;
+
+    margin: 0px 14px 0px 0px;
+
+    str: "";
 }
 
 entry {
     background-color: transparent;
 
-    font: "JetBrainsMono Nerd Font 18";
     text-color: @fg;
 
-    placeholder: "Search apps...";
-    placeholder-color: #6c7086;
+
+    placeholder: "Search";
+
+    placeholder-color: @fg-alt;
+
+    expand: true;
+
+    border: 0;
+
+    cursor-width: 2px;
 }
 
 listview {
+    background-color: transparent;
+
     lines: 6;
+
+    fixed-height: false;
+
     columns: 1;
 
     spacing: 10px;
+
     scrollbar: false;
 
-    background-color: transparent;
+    cycle: true;
+
+    dynamic: true;
 }
 
 element {
-    padding: 14px;
+    background-color: transparent;
+
     border-radius: 16px;
 
-    background-color: transparent;
+    padding: 14px 18px;
+
+    spacing: 14px;
 }
 
 element normal.normal {
@@ -72,15 +115,19 @@ element normal.normal {
 
 element selected.normal {
     background-color: @bg-alt;
-    text-color: @selected;
+    text-color: @accent;
 }
 
 element-icon {
     size: 30px;
-    margin: 0px 14px 0px 0px;
+
+    background-color: transparent;
 }
 
 element-text {
     background-color: transparent;
+
     text-color: inherit;
+
+    vertical-align: 0.5;
 }

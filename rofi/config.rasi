@@ -1,16 +1,30 @@
 configuration {
-    modi: "drun,run,window";
-    show-icons: true;
-    icon-theme: "Papirus";
+    modi: "drun";
+    combi-modi: "drun,run,calc";
 
-    font: "JetBrainsMono Nerd Font 14";
+    show-match: false;
+    show-icons: true;
+
+    font: "SF Pro Display 16";
 
     drun-display-format: "{name}";
-    location: 0;
+
     disable-history: false;
     hide-scrollbar: true;
 
-    display-drun: "Apps";
+    matching: "fuzzy";
+    sort: true;
+    tokenize: true;
+
+    display-combi: "󰍜";
+    display-drun: "";
+    display-run: "";
+    display-calc: "󰃬";
+    display-emoji: "󰞅";
+
+    sidebar-mode: false;
+
+    kb-accept-entry: "Return,KP_Enter";
 }
 
 @theme "~/.config/rofi/themes/spotlight.rasi"

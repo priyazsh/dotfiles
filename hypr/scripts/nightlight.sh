@@ -31,4 +31,4 @@ echo "$TEMP" >"$STATE_FILE"
 
 hyprctl hyprsunset temperature "$TEMP"
 
-swayosd-client --custom-message " Night Light: ${TEMP}K"
+swayosd-client --custom-message "  Night Light: ${TEMP}K"
